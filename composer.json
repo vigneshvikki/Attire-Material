@@ -1,0 +1,15 @@
+{
+    "name": "dsv/attire-theme-material",
+    "description": "A material design theme for Codeigniter v3.0 using Attire.",
+    "type": "attire-theme",
+    "require": {
+        "dsv/bundle-installer": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Sosa Valdes",
+            "email": "david.sosa.valdes@gmail.com"
+        }
+    ]
+}

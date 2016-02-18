@@ -1,0 +1,32 @@
+{% extends "master.twig" %}
+{% block content %}
+  <!-- Uses a header that scrolls with the text, rather than staying
+  locked at the top -->
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">{{page.title|title}} <small>{{page.subtitle}}</small></span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        {% include 'components/navigation.twig' %}
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">{{system.fullname}}</small></span>
+      {% include 'components/navigation.twig' %}
+    </div>
+    <div class="demo-ribbon"></div>
+    <main class="mdl-layout__content">
+    <div class="page-content">
+      {% include 'components/ribbon_content.twig' %}
+      <div class="mdl-grid">
+        {% for view,params in views %}
+          {% include view with params %}
+        {% endfor %}
+      </div>
+    </div>
+    </main>
+  </div>
+{% endblock %}
