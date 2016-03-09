@@ -17,14 +17,10 @@
     </div>
     <div class="demo-ribbon"></div>
     <main class="mdl-layout__content">
-    <div class="page-content">
-      {% include 'components/ribbon_content.twig' %}
-      <div class="mdl-grid">
-        {% for view,params in views %}
-          {% include view with params %}
-        {% endfor %}
-      </div>
-    </div>
+    {% include 'components/ribbon_content.twig' %}
+    {% for view,params in views %}
+      {% include view with params %}
+    {% endfor %}
     </main>
   </div>
 {% endblock %}
